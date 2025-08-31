@@ -1,0 +1,38 @@
+def convert(val):
+    if val.isalpha() and len(val) == 1:
+        return ord(val.upper()) - ord('A') + 1
+    return float(val)
+
+print("Simple Calculator, 2025 Version 3 by ClockworkConnor")
+print("Welcome to the Simple Calculator. Check details below.")
+print("Calculator supports letters A-Z, numbers and +, -, / and * operator types.")
+print("Warning: Using a letter and number in the same expression will result in an Error")
+
+a = input("Enter first: ")
+op = input("Which prefered input? (+, -, *, /) ")
+b = input("Enter last: ")
+
+# Convert inputs here
+x = convert(a)
+y = convert(b)
+
+if op == "+":
+    print(a + b)  
+elif op == "-":
+    print(a - b)  
+elif op == "*":
+    if a == 0:
+        print("This action can be used however it is not ethical.")
+    print(a * b)
+elif op == "/":
+    if b == 0:
+        print("Error, 0 cannot be divided.")
+    else:
+        print(x / y)
+
+# Written for some Python learning.
+
+# Current updates/additions below
+
+if b != 0:
+    print("You have successfully printed", a, op, b)
